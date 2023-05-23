@@ -1,0 +1,22 @@
+block config
+	include config
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no')
+		meta(name="description", content=siteDescription)
+		meta(name='keywords', content='')
+		if title
+			title #{title}
+		else
+			title Заголовок
+		block links
+			link(rel="stylesheet" href="assets/css/main.css?v=" + siteVersion)
+
+		body(class = classBody)
+			block main
+
+		block js
+			script(src="assets/js/main.js?v=" + siteVersion)
